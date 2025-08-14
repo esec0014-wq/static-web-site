@@ -1,105 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Login Form</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f6f8fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .login-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
-    width: 300px;
-  }
-  h2 {
-    text-align: center;
-  }
-  label {
-    display: block;
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    box-sizing: border-box;
-  }
-  button {
-    margin-top: 1.5rem;
-    padding: 0.7rem;
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #0056b3;
-  }
-  .error {
-    color: red;
-    margin-top: 0.5rem;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Computing Basics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 1rem;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #0057b8;
+    }
+    header, section, footer {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Introduction to Cloud Computing</h1>
+    <p>A simple overview of cloud computing concepts and services.</p>
+  </header>
 
-<div class="login-container">
-  <h2>Login</h2>
-  <form id="loginForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" required />
+  <section>
+    <h2>What is Cloud Computing?</h2>
+    <p>Cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the internet (“the cloud”) to offer faster innovation, flexible resources, and economies of scale.</p>
+  </section>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" required />
+  <section>
+    <h2>Benefits of Cloud Computing</h2>
+    <ul>
+      <li>Cost Efficiency</li>
+      <li>Scalability</li>
+      <li>Accessibility from anywhere</li>
+      <li>Flexibility and Agility</li>
+      <li>Automatic Updates and Maintenance</li>
+    </ul>
+  </section>
 
-    <button type="submit">Log In</button>
-    <div class="error" id="error"></div>
-  </form>
-</div>
+  <section>
+    <h2>Types of Cloud Services</h2>
+    <ul>
+      <li><strong>IaaS:</strong> Infrastructure as a Service - virtual machines, storage, networks</li>
+      <li><strong>PaaS:</strong> Platform as a Service - development platforms and tools</li>
+      <li><strong>SaaS:</strong> Software as a Service - ready-to-use software applications</li>
+    </ul>
+  </section>
 
-<script>
-  const loginForm = document.getElementById('loginForm');
-  const errorDiv = document.getElementById('error');
+  <section>
+    <h2>Popular Cloud Providers</h2>
+    <ul>
+      <li>Amazon Web Services (AWS)</li>
+      <li>Google Cloud Platform (GCP)</li>
+      <li>Microsoft Azure</li>
+      <li>IBM Cloud</li>
+    </ul>
+  </section>
 
-  loginForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const email = loginForm.email.value.trim();
-    const password = loginForm.password.value.trim();
-    
-    // Simple validation example
-    if(email === '' || password === '') {
-      errorDiv.textContent = 'Please enter email and password.';
-      return;
-    }
+  <section>
+    <h2>Common Use Cases</h2>
+    <ul>
+      <li>Web hosting and content delivery</li>
+      <li>Data storage and backup</li>
+      <li>Application development and testing</li>
+      <li>Machine learning and big data analytics</li>
+      <li>Internet of Things (IoT)</li>
+    </ul>
+  </section>
 
-    // Example login simulation: accept only a fixed username/password for demo
-    if(email === 'user@example.com' && password === 'password123') {
-      errorDiv.style.color = 'green';
-      errorDiv.textContent = 'Login successful! Redirecting...';
-      // Here you could redirect or show protected content
-      setTimeout(() => {
-        window.location.href = 'home.html'; // example redirect
-      }, 1000);
-    } else {
-      errorDiv.style.color = 'red';
-      errorDiv.textContent = 'Invalid email or password.';
-    }
-  });
-</script>
-
+  <footer>
+    <p>© 2025 Cloud Computing Basics</p>
+  </footer>
 </body>
 </html>
